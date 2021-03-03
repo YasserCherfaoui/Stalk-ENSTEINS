@@ -460,6 +460,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .signin_methods {
@@ -480,12 +481,12 @@
   font-size: 10px;
 }
 .signin_inputs {
+  margin: 0px;
+  padding: 0px;
   position: absolute;
   top: 440px;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  left: 36px;
+  width: 375px;
 }
 .signin_inputs input {
   width: 303px;
@@ -495,7 +496,7 @@
   outline: none;
   text-indent: 20px;
   font-size: 15px;
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   margin-bottom: 12px;
   border: 0px;
 }
@@ -509,6 +510,9 @@
   border: 0px;
   font-family: "GothamPro", sans-serif;
   font-size: 17px;
+  cursor: pointer;
+  position: relative;
+  left: 38px;
 }
 .signin_inputs img {
   position: relative;
@@ -516,7 +520,7 @@
   right: 40px;
   bottom: 5px;
 }
-#dha {
+.dha {
   position: absolute;
   top: 698px;
   font-family: "Poppins";
@@ -524,6 +528,48 @@
   font-size: 13px;
   left: 85px;
 }
-#dha span {
+.dha span {
   color: white;
+  cursor: pointer;
+}
+#persons {
+  position: absolute;
+  top: 60px;
+  left: 62px;
+}
+#jtt {
+  position: absolute;
+  left: 30px;
+  top: 167px;
+  font-family: "Montserrat", sans-serif;
+  color: #707070;
+}
+#ca {
+  color: white;
+  font-size: 28px;
+  font-family: "GothamPro", sans-serif;
+  position: absolute;
+  top: 190px;
+  left: 30px;
+}
+.r {
+  position: absolute;
+  top: 251px;
+  left: 16px;
+}
+#ocue {
+  position: absolute;
+  top: 334px;
+  left: 132px;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  color: #707070;
+}
+.re {
+  position: absolute;
+  top: 375px;
+}
+.reg {
+  position: absolute;
+  top: 707px;
 }
