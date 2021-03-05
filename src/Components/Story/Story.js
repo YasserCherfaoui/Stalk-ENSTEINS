@@ -1,6 +1,7 @@
 import React from "react";
 
 const Story = ({ img, id, user }) => {
+  console.log(img);
   return (
     <div className="story" id={id}>
       <img src={img} alt="story" />

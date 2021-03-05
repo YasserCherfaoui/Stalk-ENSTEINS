@@ -22,7 +22,7 @@ const Post = ({ pic, user, time, postpic, likes, liker, likers }) => {
         <div className="heartit">
           <img src={heart} alt="heart" />
         </div>
-        <div class="likes">{likes}</div>
+        <div className="likes">{likes}</div>
         <div className="comment">
           <img src={comments} alt="comments" />
         </div>

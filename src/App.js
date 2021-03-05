@@ -8,36 +8,38 @@ import Posts from "./Components/Posts/Posts";
 import Stories from "./Components/Story/Stories";
 import { connect } from "react-redux";
 import Profile from "./Components/Profile";
-import image from "./assets/pp.png";
-import SignIn from "./Components/auth/SignIn";
+
 class App extends Component {
   state = {
     position: this.props.currentPosition,
   };
 
   render() {
-    const { currentPosition, auth } = this.props;
-    return (
+    const { currentPosition, user, loading } = this.props;
+
+    return loading ? (
+      <div></div>
+    ) : (
       <React.Fragment>
         <div className={"App"}>
           <div id="top">
             <img src={top} alt="top" />
           </div>
-          <SignIn hidden={auth === null ? false : true} />
-          <div hidden={auth === null ? true : false}>
+
+          <div>
             {currentPosition === "HOME" && (
               <React.Fragment>
                 <Nav />
-                <Stories />
+                <Stories me={user} />
                 <Explore />
                 <Posts />
               </React.Fragment>
             )}
             <Profile
               hidden={currentPosition !== "PROFILE" ? true : false}
-              user={{ name: "YasserCherfaoui", pic: image }}
+              user={user}
             />
-            <Footer />
+            <Footer me={user} />
           </div>
         </div>
       </React.Fragment>
@@ -47,6 +49,7 @@ class App extends Component {
 
 const mapStateToProps = (state) => ({
   currentPosition: state.app.position,
-  auth: state.user.currentUser,
+  user: state.user.currentUser,
+  loading: state.user.isLoading,
 });
 export default connect(mapStateToProps)(App);

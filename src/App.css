@@ -1,18 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&family=Poppins:wght@200&display=swap");
 @import url("https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css");
 .App {
-  background-color: #181818 !important;
   width: 100vw;
   height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
   position: relative;
   margin: 0;
+  background-color: #181818 !important;
+  z-index: 2;
 }
 .App::-webkit-scrollbar {
   display: none;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 420px) {
   body {
     display: flex;
     justify-content: center;
@@ -26,6 +27,7 @@
   position: fixed;
   z-index: 4;
   padding-left: 16px;
+  padding-top: 5px;
 }
 .nav {
   display: flex;
@@ -150,7 +152,7 @@
 }
 .extra {
   position: relative;
-  padding-left: 35px;
+  left: 20px;
   display: flex;
 }
 .extra img {
@@ -258,7 +260,18 @@
   color: white;
 }
 /* Footer.js */
-
+#search {
+}
+#profile {
+}
+#home {
+  fill: #52e5e7;
+  background-color: #52e5e7;
+}
+#notifications {
+}
+#add {
+}
 .footer {
   width: 375px;
   height: 61px;
@@ -286,6 +299,7 @@
   padding-right: 45px;
   height: 20px;
 }
+
 .ig {
   height: 63px;
   width: 63px;
@@ -297,6 +311,18 @@
   position: fixed;
   left: calc(50vw - 61px / 2);
   bottom: 20px;
+}
+.fpp {
+  position: relative;
+  left: 130px;
+  width: 25px;
+  bottom: 5px;
+  height: 25px;
+}
+.fpp img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 @media screen and (max-width: 400px) {
   .footer {
@@ -310,6 +336,7 @@
   width: 375px;
   height: 100vh;
 }
+
 .user_info {
   width: 375px;
   height: 370px;
@@ -415,161 +442,10 @@
 #highlightedp {
   border-bottom: 3px solid #52e5e7;
 }
-/* SignIn.js */
-.signIn {
-  background: #181818;
-  width: 375px;
-  height: 100vh;
-  font-family: "Montserrat", sans-serif;
-}
-#AppLogo {
+#logout {
   position: absolute;
-  top: 50px;
-  left: 145px;
-}
-#LogoText {
-  position: absolute;
-  top: 142px;
-  left: 107px;
-}
-#wb {
-  color: #707070;
-  font-size: 15px;
-  position: absolute;
-  top: 231px;
-  left: 36px;
-}
-#ali {
-  position: absolute;
-  top: 255px;
-  left: 32px;
-  font-size: "GothamPro";
-  font-weight: 37;
+  top: 61px;
+  left: 317px;
+  font-size: 26px;
   color: white;
-  font-size: 28px;
-}
-.signin_methods button {
-  background: #31323b;
-  width: 168px;
-  height: 58px;
-  border-radius: 10px;
-  border: 0px;
-  outline: none;
-  color: white;
-  margin-right: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.signin_methods {
-  position: absolute;
-  top: 315px;
-  left: 15px;
-  display: flex;
-}
-.signin_methods img {
-  margin-right: 12px;
-}
-#lwom {
-  position: absolute;
-  top: 400px;
-  left: 138px;
-  font-family: "Poppins", sans-serif;
-  color: #707070;
-  font-size: 10px;
-}
-.signin_inputs {
-  margin: 0px;
-  padding: 0px;
-  position: absolute;
-  top: 440px;
-  left: 36px;
-  width: 375px;
-}
-.signin_inputs input {
-  width: 303px;
-  height: 74px;
-  background-color: #f9f9f9;
-  border-radius: 20px;
-  outline: none;
-  text-indent: 20px;
-  font-size: 15px;
-  font-family: "Poppins", sans-serif;
-  margin-bottom: 12px;
-  border: 0px;
-}
-.signin_inputs button {
-  background-color: #292a30;
-  border-radius: 10px;
-  width: 226px;
-  height: 64px;
-  color: white;
-  outline: none;
-  border: 0px;
-  font-family: "GothamPro", sans-serif;
-  font-size: 17px;
-  cursor: pointer;
-  position: relative;
-  left: 38px;
-}
-.signin_inputs img {
-  position: relative;
-  z-index: 4;
-  right: 40px;
-  bottom: 5px;
-}
-.dha {
-  position: absolute;
-  top: 698px;
-  font-family: "Poppins";
-  color: #707070;
-  font-size: 13px;
-  left: 85px;
-}
-.dha span {
-  color: white;
-  cursor: pointer;
-}
-#persons {
-  position: absolute;
-  top: 60px;
-  left: 62px;
-}
-#jtt {
-  position: absolute;
-  left: 30px;
-  top: 167px;
-  font-family: "Montserrat", sans-serif;
-  color: #707070;
-}
-#ca {
-  color: white;
-  font-size: 28px;
-  font-family: "GothamPro", sans-serif;
-  position: absolute;
-  top: 190px;
-  left: 30px;
-}
-.r {
-  position: absolute;
-  top: 251px;
-  left: 16px;
-}
-#ocue {
-  position: absolute;
-  top: 334px;
-  left: 132px;
-  font-family: "Poppins", sans-serif;
-  font-size: 10px;
-  color: #707070;
-}
-.re {
-  position: absolute;
-  top: 375px;
-}
-.reg {
-  position: absolute;
-  top: 707px;
 }

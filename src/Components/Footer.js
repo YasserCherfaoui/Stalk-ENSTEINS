@@ -11,6 +11,7 @@ class Footer extends Component {
     this.props.switcher(event.target.id);
   };
   render() {
+    const { me } = this.props;
     return (
       <div className="footer">
         <div className="ls">
@@ -32,7 +33,14 @@ class Footer extends Component {
             alt="notifications"
             onClick={this.clickHandler}
           />
-          <img src={p} id="PROFILE" alt="profile" onClick={this.clickHandler} />
+        </div>
+        <div className="fpp">
+          <img
+            src={me.photoURL}
+            id="PROFILE"
+            alt="profile"
+            onClick={this.clickHandler}
+          />
         </div>
       </div>
     );
